@@ -1,3 +1,4 @@
+/* ------------------------DEFAULT------------------------ */
 .App {
   text-align: center;
 }
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: red;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -36,3 +37,37 @@
     transform: rotate(360deg);
   }
 }
+
+/* ------------------------DEFAULT------------------------ */
+
+/* ------------------------CUSTOM------------------------ */
+* {
+  list-style-type: none;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: red;
+  color: white;
+}
+
+.nav-links {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.nav-link {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.navigation-link {
+  color: white;
+}
+/* ------------------------CUSTOM------------------------ */

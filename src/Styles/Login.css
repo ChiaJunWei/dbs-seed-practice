@@ -1,0 +1,78 @@
+.login {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 10%;
+  z-index: 1;
+  position: relative;
+}
+
+form {
+  text-align: center;
+  vertical-align: middle;
+  min-width: 0%;
+}
+
+img.header {
+  min-width: 100%;
+}
+
+.box {
+  margin-top: 5%;
+  display: flex;
+  position: relative;
+}
+
+.header {
+  text-align: left;
+}
+
+img.dbslogo {
+  max-width: 25%;
+  margin-left: 30%;
+  margin-right: 30%;
+  display: fixed;
+}
+
+.form-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 750px;
+  max-width: 80%;
+  margin-left: 3%;
+  min-width: 750px;
+  min-height: 400px;
+  padding: 30px 40px;
+  border-radius: 6px;
+  box-shadow: 0px 8px 36px #222;
+  background-color: white;
+  position: absolute;
+}
+
+.btn {
+  background-color: #d8232a;
+  padding: 10px;
+  width: 225px;
+  margin-left: -25px;
+}
+
+.form-group {
+  width: 100px;
+  padding: 10px;
+  margin-left: 30%;
+}
+#logininput {
+  width: 280%;
+  padding: 12px 20px;
+  margin: auto;
+  box-sizing: border-box;
+}
+.forgot-password {
+  margin-left: -30px;
+}
+.trans-box {
+  background: white;
+  padding: 10px;
+}
+h2 {
+  font: size 20px;
+}

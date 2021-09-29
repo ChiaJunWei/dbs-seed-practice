@@ -109,6 +109,7 @@ h2 {
 
 .nav {
   z-index: 9999;
+  background-color: rgb(191, 191, 191);
 }
 
 .BalanceTable {

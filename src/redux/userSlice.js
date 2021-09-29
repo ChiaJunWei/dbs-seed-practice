@@ -4,6 +4,12 @@ export const userSlice = createSlice({
     name:"user",
     initialState:{
         user:'me',
+        firstname:'John',
+        lastname:'Wayne',
+        NRIC:'S1234567h',
+        Age:'32',
+        Number:'12346578',
+        email:'john@gmail.com',
         id:'11'
         // give initalState to prevent app crash
 

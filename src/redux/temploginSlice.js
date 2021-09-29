@@ -4,8 +4,8 @@ export const temploginSlice = createSlice({
     name:"user",
     initialState:{
         tempuser:'me',
-        id:'11',
-
+        id:'11'
+        
         },
     reducers:{
         templogin: (state,action) => {

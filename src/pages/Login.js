@@ -29,18 +29,33 @@ const Login = () =>{
                 dispatch(   
                     templogin({
                         loggedIn:true,
+                        user: 'in',
+                        id: response.data.id,
                         userData: response.data,
-                        user: response.data.username,
-                        id: response.data.id
+                       
+                        // firstname:'John',
+                        // lastname:'Wayne',
+                        // NRIC:'S1234567h',
+                        // Age:'32',
+                        // Number:'12346578',
+                        // email:'john@gmail.com',
                     })
                 );
                 } else {
                     dispatch(   
                         login({
                             loggedIn:true,
+                            user: 'in',
                             userData: response.data,
                             user: response.data.username,
-                            id: response.data.id
+                            id: response.data.id,
+                            lastname:response.data.username,                        
+                            firstname:'John',
+                            lastname:'Wayne',
+                            NRIC:'S1234567h',
+                            Age:'32',
+                            Number:'12346578',
+                            email:'john@gmail.com',
                         })
                     );
 

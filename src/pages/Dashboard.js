@@ -12,30 +12,29 @@ import Orders from './Orders';
 import Sidebar from './Sidebar/Sidebar';
 import '../Styles/dashboard.css';
 import Textbox from "./Textbox";
-
-
+import LoggedIn from "./isLogin"
 
 
 const mdTheme = createTheme();
 
 function DashboardContent() {
+    LoggedIn();
+    
   
   return (
-    <div classname="dashboard-components-container">
+
         <ThemeProvider theme={mdTheme}>
         <Sidebar/>
-        <Box sx={{ display: 'flex' }}>
+        <div classname="dashboard-components-container">
+        <Box sx={{ display: 'flex' }} >
             <CssBaseline />          
             <Box
             component="main"
             sx={{
                 backgroundColor: (theme) =>
-                theme.palette.mode === 'light'
-                    ? theme.palette.grey[200]
-                    : theme.palette.grey[200],
-                flexGrow: 1,
-                height: '100vh',
+                theme.palette.mode === 'light',
                 overflow: 'auto',
+                zIndex:2,
             }}
             >
             <Toolbar />
@@ -43,7 +42,7 @@ function DashboardContent() {
                 <Grid container spacing={3}>
                 {/* Textbox */}
                 <Grid item xs={12}>
-                    <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                    <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column', boxShadow: 10}}>
                     <Textbox />
                     </Paper>
                 </Grid>
@@ -56,6 +55,7 @@ function DashboardContent() {
                         display: 'flex',
                         flexDirection: 'column',
                         height: 240,
+                        boxShadow: 10
                     }}
                     >
                     <Chart />
@@ -69,6 +69,7 @@ function DashboardContent() {
                         display: 'flex',
                         flexDirection: 'column',
                         height: 240,
+                        boxShadow: 10
                     }}
                     >
                     <Deposits />
@@ -76,7 +77,7 @@ function DashboardContent() {
                 </Grid>
                 {/* Recent Orders */}
                 <Grid item xs={12}>
-                    <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                    <Paper sx={{ p: 2   , display: 'flex', flexDirection: 'column',boxShadow: 10 }}>
                     <Orders />
                     </Paper>
                 </Grid>
@@ -84,8 +85,9 @@ function DashboardContent() {
             </Container>
             </Box>
         </Box>
+        </div>
         </ThemeProvider>
-    </div>
+
   );
 }
 

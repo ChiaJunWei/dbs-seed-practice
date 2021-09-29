@@ -15,10 +15,10 @@ export default function Deposits() {
         $3,024.00
       </Typography>
       <Typography color="text.secondary" sx={{ flex: 1 }}>
-        on 15 March, 2019
+        on 15 Sept 2020
       </Typography>
       <div>
-        <Link color="primary" href="#" onClick={preventDefault} to={{ pathname: "/balance"}}>
+        <Link color="primary" href="/balance" to={{ pathname: "/balance"}}>
           View balance
         </Link>
       </div>

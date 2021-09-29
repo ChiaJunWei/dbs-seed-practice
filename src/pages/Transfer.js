@@ -9,36 +9,46 @@ import LogInCheck from "../Functionals/LogInCheck"
 import GetUserData from "../Functionals/GetUserData"
 
 const Transfer =() => {
-    const user = useSelector(selectUser);
-    const tempuser = useSelector(selectTempUser);
     const [payeeid,setPayeeid]= useState("");
     const [amount,setAmount]= useState("");
     const [egift,setEgift]= useState(false);
     const [message,setMessage]= useState("");
 
-    var data=GetUserData();
-    LogInCheck();  
+    var userData=GetUserData();
+    LogInCheck();
+    
+    const url = "https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts"
+    const xApiKey = "FagLlQytW3aPBTWJXcAxo2QA1QqEtr2u3xnBPLAd"
+    let config ={
+      headers:{ 'x-api-key': xApiKey }
+    }
+    let bodydata ={
+        body: JSON.stringify({
+        "custID": userData.custID,
+        "accountKey": userData.accountKey,
+        "payeeID":payeeid,
+        "amount":amount,
+        "eGift":egift,
+        "message":message,
 
-    // get custID,accountKey
-    //user.custID, user.accountkey
+     })
+    }    
 
 
     const handleSubmit= async(e)=>{             
         e.preventDefault();
 
-        axios.get('https://jsonplaceholder.typicode.com/users/1')        
+        axios.post(url,bodydata,config)        
         .then((response) => {
             console.log(response);
             if (response.status > 300) {
                 alert(response.statusText)
             } else {
-                console.log('success')
-                   
+                alert(response.statusCode);
+                alert(response.message);
 
             }
-        }, (error) => {
-            console.log(error);
-        });
+        })
     }
 
 

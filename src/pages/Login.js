@@ -44,12 +44,14 @@ const Login = () =>{
                         id: response.data.id,
                         userData: response.data,
                        
-                        // firstname:'John',
-                        // lastname:'Wayne',
-                        // NRIC:'S1234567h',
-                        // Age:'32',
-                        // Number:'12346578',
-                        // email:'john@gmail.com',
+                        custID:'custID',
+                        accountKey:'accountKey',
+                        firstname:'John',
+                        lastname:'Wayne',
+                        NRIC:'S1234567h',
+                        Age:'0',
+                        Number:'12346578',
+                        email:'john@gmail.com',
                     })
                 );
                 } else {

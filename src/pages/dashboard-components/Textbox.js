@@ -23,7 +23,7 @@ const Grid = styled(MuiGrid)(({ theme }) => ({
 }));
 
 export default function VerticalDividerText() {
-    var data=GetUserData();
+    var userData=GetUserData();
 
 
   return (
@@ -33,14 +33,14 @@ export default function VerticalDividerText() {
       <Grid item xs>
         <List sx={style} component="nav" aria-label="mailbox folders">
         <ListItem button>
-            <p3> First name :  {(data.firstname)} </p3>
+            <p3> First name :  {(userData.firstname)} </p3>
         </ListItem>
         <Divider />
         <ListItem button divider>
-            <p3> Last name :  {(data.lastname)} </p3>
+            <p3> Last name :  {(userData.lastname)} </p3>
         </ListItem>
         <ListItem button>
-            <p3> NRIC :  {(data.NRIC)} </p3>
+            <p3> NRIC :  {(userData.NRIC)} </p3>
           </ListItem>
         </List>
       </Grid>
@@ -49,14 +49,14 @@ export default function VerticalDividerText() {
       <Grid item xs>
       <List sx={style} component="nav" aria-label="mailbox folders">
         <ListItem button>
-            <p3> Age :  {(data.Age)} </p3>
+            <p3> Age :  {(userData.Age)} </p3>
         </ListItem>
         <Divider />
         <ListItem button divider>   
-            <p3> Phone Number :  {(data.Number)} </p3>
+            <p3> Phone Number :  {(userData.Number)} </p3>
           </ListItem>
         <ListItem button>
-              <p3> Email :  {(data.email)} </p3>
+              <p3> Email :  {(userData.email)} </p3>
         </ListItem>
         </List>
       </Grid>

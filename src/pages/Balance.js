@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Sidebar from './Sidebar/Sidebar';
 import '../Styles/Login.css'
 
-
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -12,11 +11,11 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles  } from '@material-ui/core/styles';
 import LoggedIn from "./isLogin"
-
+import GetUserData from "./GetUserData"
 
 
 function Balance() {
-    const [data,setdata] = useState({});
+    var data=GetUserData();
     
     LoggedIn();  
 
@@ -24,17 +23,20 @@ function Balance() {
          table:{
              minWidth: 650,
              margin: '5px',
+             
          },
          tableContainer:{
              borderRadius:15,
-             margin: '0px 100px 300px 300px',             
+             margin: '150px 500px 300px 400px',             
              maxWidth:1000,
+             
              
 
          },
          tableHeaderCell:{
              fontWeight:'bold',
-             backgroundColor: theme.palette.primary.light,
+             backgroundColor: 'lightblue',
+             overflow: "hidden"
 
          }
          
@@ -45,8 +47,8 @@ function Balance() {
       <div>
         <Sidebar/>
         <div className= "table-container">
-        <TableContainer component={Paper} className={classes.tableContainer} >
-        <Table className={classes.table} aria-label="simple table">
+        <TableContainer component={Paper} className={classes.tableContainer} sx={{overflow: 'hidden',boxShadow: 10}}>  
+        <Table className={classes.table} aria-label="simple table" >
           <TableHead>
             <TableRow>
               <TableCell className={classes.tableHeaderCell}>Account Name</TableCell>
@@ -57,11 +59,9 @@ function Balance() {
           </TableHead>
           <TableBody>
          <TableRow              >
-                <TableCell component="th" scope="row">
-1
-                </TableCell>
-                <TableCell align="left">2 </TableCell>
-                <TableCell align="left">3</TableCell>         
+                <TableCell component="th" scope="row">{data.firstname} </TableCell>
+                <TableCell align="left">{data.NRIC}</TableCell>
+                <TableCell align="left">{data.Number}</TableCell>         
               </TableRow>
           </TableBody>
         </Table>

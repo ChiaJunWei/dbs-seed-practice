@@ -1,7 +1,7 @@
 import React from 'react'
 import './Sidebar.css'
 import  {SidebarData } from './SidebarData'
-import { Link, useHistory, useLocation,useState } from "react-router-dom";
+import { Link,  useLocation } from "react-router-dom";
 
 function Sidebar() {
     const location = useLocation();
@@ -16,7 +16,7 @@ function Sidebar() {
                         <li 
                             key={key} 
                             className="row"
-                            id={window.location.pathname== val.link? "active" :""}
+                            id={window.location.pathname=== val.link? "active" :""}
  >
                                 {" "}
                                 <div id="icon">{val.icon}</div> 

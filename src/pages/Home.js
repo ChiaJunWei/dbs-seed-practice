@@ -2,9 +2,9 @@ import React from 'react';
 import Cards from '../pages/cards/Cards';
 
 
-const Home = () => {
 
-  
+const Home = () => {
+    
   return (
     <div>
         <Cards/>

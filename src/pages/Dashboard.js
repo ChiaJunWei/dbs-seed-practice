@@ -1,37 +1,22 @@
 import React from 'react'
 import Sidebar from './Sidebar/Sidebar';
-import { useLocation,useHistory } from "react-router-dom";
-import BalanceBarChart from './Charts/BalanceBarChart';
-import './Dashboard.css'
-import SavingsBar from './Charts/SavingsBar';
+import '../Styles/dashboard.css'
+import LoggedIn from "./isLogin"
+import GetUserData from "./GetUserData"
 
 
 const Dashboard = () => {
-    const location = useLocation();
-	const history = useHistory();
-    
-	if (
-		location.state === undefined ||
-		Object.keys(location.state).length === 0
-	) {
-		history.push("/Login");
-	}
+    var data=GetUserData();
+    LoggedIn();
 
     return (
         <div className='dashboard-container'>
-            <div>                
-                <Sidebar/>                
-            </div>
+            <Sidebar/>           
+
             <div className='dashboard-components-container'>
-                <h1> Welcome to DBS , {location.state.name} </h1>
-                {/* <div className='barChart' id='BalanceBarChart'> 
-                <BalanceBarChart/>   
-                </div> */}
-                <div  className='SavingsbarChart'>
-                    <h1 className="Savings">Savings</h1>                   
-                    <SavingsBar/>
-                
-                </div>
+                <p style={{color: "#538b01"}}> Welcome back, {(data.user)} </p>
+                <img src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt = "dbs-logo"width="200" height="300"></img>
+                <p> ID:{(data.id)} </p>
                  
             </div>
         </div>

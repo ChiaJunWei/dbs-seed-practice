@@ -19,7 +19,7 @@ function Cards() {
                             
                         />
                         <CardItem 
-                            src ='https://blogtrade.net/images/exness/1593481279064/original/internal-transfers-exness.png'
+                            src ={dbs2}
                             label='Local Transfer'
                             path='/login'
                             

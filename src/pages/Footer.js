@@ -9,32 +9,32 @@ const Footer = () => {
         <Row class = "p1">
           <Column>
           <h1 id='footer-header'>Useful Links</h1>
-            < a id="footer-li" id='url-link' href="#">About DBS</a>
-            < a id="footer-li" id='url-link' href="#">Investoer Relations</a>
-            < a id="footer-li" id='url-link' href="#">Disclaimer & Important Notice</a>
+            < a id="footer-li" id='url-link' href="#/">About DBS</a>
+            < a id="footer-li" id='url-link' href="/home ">Investoer Relations</a>
+            < a id="footer-li" id='url-link' href="/home">Disclaimer & Important Notice</a>
             
           </Column>
           <Column>
           <h1 id='footer-header'>Others</h1>
-            <a id="footer-li" id='url-link' href="#">Forms</a>
-            <a id="footer-li" id='url-link' href="#">Rates</a>
-            <a id="footer-li" id='url-link' href="#">Tools</a>
-            <a id="footer-li" id='url-link' href="#">Update Personal Particulars</a>
+            <a id="footer-li" id='url-link' href="/">Forms</a>
+            <a id="footer-li" id='url-link' href="/">Rates</a>
+            <a id="footer-li" id='url-link' href="/">Tools</a>
+            <a id="footer-li" id='url-link' href="/">Update Personal Particulars</a>
           </Column>
 
           <Column>
           <h1 id='footer-header'>Need Help?</h1>
-            <a id="footer-li" id='url-link' href="#">Help & Support Portal</a>
-            <a id="footer-li" id='url-link' href="#">Phone - 1800 111 1111</a>
-            <a id="footer-li" id='url-link' href="#">Email </a>
-            <a id="footer-li" id='url-link' href="#">Get In Touch with Us</a>
+            <a id="footer-li" id='url-link' href="/">Help & Support Portal</a>
+            <a id="footer-li" id='url-link' href="/">Phone - 1800 111 1111</a>
+            <a id="footer-li" id='url-link' href="/">Email </a>
+            <a id="footer-li" id='url-link' href="/">Get In Touch with Us</a>
           </Column>
           <Column>
           <h1 id='footer-header'>Markets</h1>
-            <a id="footer-li" id='url-link' href="#">Singapore</a>
-            <a id="footer-li" id='url-link' href="#">Hong Kong</a>
-            <a id="footer-li" id='url-link' href="#">India</a>
-            <a id="footer-li" id='url-link' href="#">Taiwan</a>
+            <a id="footer-li" id='url-link' href="/">Singapore</a>
+            <a id="footer-li" id='url-link' href="/">Hong Kong</a>
+            <a id="footer-li" id='url-link' href="/">India</a>
+            <a id="footer-li" id='url-link' href="/">Taiwan</a>
           </Column>
         </Row>
       </Container>
@@ -110,11 +110,11 @@ const Row = styled.div`
 `;
    
    
- const Heading = styled.p`
+ /* const Heading = styled.p`
   font-size: 24px;
   color: #fff;
   margin-bottom: 40px;
   font-weight: bold;
-`;
+`; */
 
 export default Footer;

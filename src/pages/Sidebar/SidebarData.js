@@ -2,8 +2,7 @@ import React from 'react'
 import HomeIcon from '@material-ui/icons/Home';
 import LocalAtmIcon from '@material-ui/icons/LocalAtm';
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
-import SettingsIcon from '@material-ui/icons/Settings';
-import InfoIcon from '@material-ui/icons/Info';
+import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
 
 
 export const SidebarData= [
@@ -23,20 +22,20 @@ export const SidebarData= [
     {
         title:"Transcation History",
         icon:<AccountBalanceIcon/>,
+        link:"/transaction" 
+
+    },
+    {
+        title:"Balance",
+        icon:<AccountBalanceWalletIcon/>,
         link:"/balance"
 
     },
-    {
-        title:"Settings",
-        icon:<SettingsIcon/>,
-        link:"/setting"
+    // {
+    //     title:"About Me",
+    //     icon:<InfoIcon/>,
+    //     link:"/about"
 
-    },
-    {
-        title:"About Me",
-        icon:<InfoIcon/>,
-        link:"/about"
-
-    }
+    // }
 
 ]

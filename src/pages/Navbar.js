@@ -1,20 +1,38 @@
 import React from "react";
-import { Link, useHistory, useLocation } from "react-router-dom";
+import { Link} from "react-router-dom";
 import header1 from '../assets/dbslogo.png';
+import '../Styles/Login.css'
+
+import {useSelector} from "react-redux"
+import {selectUser} from '../redux/userSlice'
+import {selectTempUser} from '../redux/temploginSlice'
+import {logout} from "../redux/userSlice"
+import {templogout} from "../redux/temploginSlice"
+import {useDispatch} from "react-redux"
+
 
 export const Navbar = () => {
-	const location = useLocation();
-	if (location.state === undefined) {
-		location.state = {};
-	}
-	console.log(location);
+
+	const dispatch = useDispatch();
+	const user = useSelector(selectUser);
+	const tempuser = useSelector(selectTempUser);
+	
+
+
+	const handleLogout = (e)=>{
+		e.preventDefault();
+		dispatch(logout());
+		dispatch(templogout());
+	}	 
+	
+
 	return (
 		<div id="nav" >
 			
 			<li className="nav-link-logo">
 			<Link
 				className="navigation-link"
-				to={{ pathname: "/", state: { ...location.state } }}
+				to={{ pathname: "/" }}
 			>
 				<img src={header1} alt = "dbs-logo"width="180" height="60"></img>
 			</Link>
@@ -25,7 +43,7 @@ export const Navbar = () => {
 				<li className="nav-link">
 					<Link
 						className="navigation-link"
-						to={{ pathname: "/", state: { ...location.state } }}
+						to={{ pathname: "/"}}
 					>
 						HOME
 					</Link>
@@ -33,7 +51,7 @@ export const Navbar = () => {
 				<li className="nav-link">
 					<Link
 						className="navigation-link"
-						to={{ pathname: "/dashboard", state: { ...location.state } }}
+						to={{ pathname: "/dashboard"}}
 					>
 						Dashboard
 					</Link>
@@ -44,39 +62,40 @@ export const Navbar = () => {
 						className="navigation-link"
 						to={{
 							pathname: "/balance",
-							state: { ...location.state },
 						}}
-					>
+					>	
 						Account Balances
 					</Link>
 				</li>
-				{Object.keys(location.state).length === 0 ? (
-					<li className="nav-link">
-						<Link
-							className="navigation-link"
-							to={{
-								pathname: "/login",
-								state: { ...location.state },
-							}}
-						>
-							Log In
-						</Link>
-					</li>
+				{user!=='me' || tempuser!=='me' ?(
+					
+				<li className="nav-link">
+				<Link
+					className="navigation-link"
+					to={{
+						pathname: "/",
+					}}
+					onClick={(e)=> handleLogout(e)}
+				>
+					Logout 					
+				</Link>
+				</li>
+									
+
 				) : (
 					<li className="nav-link">
-						<Link
-							className="navigation-link"
-							to={{
-								pathname: "/",
-								state: {},
-							}}
-						>
-							Logout [{location.state.name}]
-							
-						</Link>
-						
-					</li>
-				)}
+					<Link
+						className="navigation-link"
+						to={{
+							pathname: "/login",
+						}}
+					>
+						Log In
+					</Link>
+				</li>
+
+				)
+						}
 			</ul>
 		</div>
 	);

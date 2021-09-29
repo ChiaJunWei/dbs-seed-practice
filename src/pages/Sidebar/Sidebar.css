@@ -1,12 +1,14 @@
 .Sidebar-background {
   width: 100vw;
-  height: 80ch;
+  height: 80vh;
   position: absolute;
+  z-index: 999;
+  margin-top: 0px;
 }
 
 .Sidebar {
   height: 3000px;
-  width: 200px;
+  width: 220px;
   background-color: #494d55;
   box-shadow: 1cm;
   padding: 0px;
@@ -20,7 +22,7 @@
 }
 .SidebarList .row {
   width: 100%;
-  height: 60px;
+  height: 80px;
   list-style-type: none;
   margin: 0%;
   display: flex;

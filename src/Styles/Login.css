@@ -2,8 +2,9 @@
   text-align: center;
   vertical-align: middle;
   min-width: 10%;
-  z-index: 1;
+  z-index: 1000;
   position: relative;
+  min-width: 300px;
 }
 
 form {
@@ -66,6 +67,9 @@ img.dbslogo {
   margin: auto;
   box-sizing: border-box;
 }
+.stay-logged-in {
+  margin-left: -30px;
+}
 .forgot-password {
   margin-left: -30px;
 }
@@ -73,6 +77,43 @@ img.dbslogo {
   background: white;
   padding: 10px;
 }
+
+.egiftbutton {
+  float: left;
+}
+
 h2 {
   font: size 20px;
+}
+
+.transfer-container {
+  width: 100%;
+  top: 0;
+}
+
+.transfer-page-container {
+  float: left;
+  width: 82%;
+  margin-left: 200px;
+  min-width: 800px;
+}
+
+.table-container {
+  float: left;
+  width: 82%;
+  margin-left: 20px;
+  margin-top: 50px;
+  min-width: 800px;
+  position: relative;
+}
+
+.nav {
+  z-index: 9999;
+}
+
+.BalanceTable {
+  margin: 600px;
+  margin-top: 250px;
+  margin-left: 800px;
+  float: left;
 }

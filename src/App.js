@@ -1,5 +1,4 @@
 import "./App.css";
-import { Navigate } from 'react-router-dom';
 import React from 'react'
 import { Route, BrowserRouter as Router} from "react-router-dom";
 import { Navbar } from "./pages/Navbar";
@@ -9,7 +8,7 @@ import Footer from "./pages/Footer";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Transfer from "./pages/Transfer";
-
+import TransactionTable from "./pages/TransactionTable";
 
 
 const App=() =>{
@@ -20,10 +19,11 @@ const App=() =>{
 			<Router>
 				<Navbar/>
 					<Route exact path="/" component={Home} />
-					<Route path="/Dashboard" component={Dashboard} />
-					<Route path="/balance"	component={Balance} />
-					<Route path="/login" component={Login}/>
-					<Route path="/transfer" component={Transfer}	/>
+					<Route exact path="/Dashboard" component={Dashboard} />
+					<Route exact path="/balance"	component={Balance} />
+					<Route exact path="/login" component={Login}/>
+					<Route exact path="/transfer" component={Transfer}	/>
+					<Route exact path="/transaction" component={TransactionTable}	/>
 				<Footer/>
 			</Router>
 			

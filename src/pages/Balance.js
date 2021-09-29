@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from './Sidebar/Sidebar';
 import '../Styles/Login.css'
+import axios from 'axios';
 
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
@@ -10,14 +11,41 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles  } from '@material-ui/core/styles';
-import LoggedIn from "../Functionals/isLogin"
+import LogInCheck from "../Functionals/LogInCheck";
 import GetUserData from "../Functionals/GetUserData"
 
 
 function Balance() {
-    var data=GetUserData();
-    
-    LoggedIn();  
+    var userData=GetUserData();
+    var accountInfo = [];
+
+    const url = "https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/accounts"
+    const xApiKey = "FagLlQytW3aPBTWJXcAxo2QA1QqEtr2u3xnBPLAd"
+    let config ={
+      headers:{ 'x-api-key': xApiKey }
+    }
+    let bodydata ={
+        body: JSON.stringify({
+        "custID": userData.custID,
+        "accountKey": userData.accountKey })
+    }    
+    LogInCheck();
+
+    useEffect(()=> {
+      axios.post(url,bodydata,config)        
+      .then((response) => {
+          console.log(response);
+          if (response.status > 400) {
+              alert(response.statusText)
+          } else {
+              console.log('success')
+              //might need to stringnify
+              accountInfo = response.data;
+              
+          }
+  },[])})
+
+
 
        const useStyles = makeStyles((theme)=> ({
          table:{
@@ -59,9 +87,9 @@ function Balance() {
           </TableHead>
           <TableBody>
          <TableRow              >
-                <TableCell component="th" scope="row">{data.firstname} </TableCell>
-                <TableCell align="left">{data.NRIC}</TableCell>
-                <TableCell align="left">{data.Number}</TableCell>         
+                <TableCell component="th" scope="row">{accountInfo.accountName} </TableCell>
+                <TableCell align="left">{accountInfo.accountNumber}</TableCell>
+                <TableCell align="left">{accountInfo.availableBal}</TableCell>         
               </TableRow>
           </TableBody>
         </Table>

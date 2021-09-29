@@ -5,7 +5,7 @@ import Sidebar from './Sidebar/Sidebar';
 import {useSelector} from "react-redux"
 import {selectUser} from '../redux/userSlice'
 import {selectTempUser} from '../redux/temploginSlice'
-import LoggedIn from "../Functionals/isLogin"
+import LogInCheck from "../Functionals/LogInCheck"
 import GetUserData from "../Functionals/GetUserData"
 
 const Transfer =() => {
@@ -17,7 +17,7 @@ const Transfer =() => {
     const [message,setMessage]= useState("");
 
     var data=GetUserData();
-    LoggedIn();  
+    LogInCheck();  
 
     // get custID,accountKey
     //user.custID, user.accountkey

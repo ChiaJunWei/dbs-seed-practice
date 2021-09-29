@@ -14,11 +14,22 @@ const Login = () =>{
     const dispatch= useDispatch();
     let history = useHistory();
 
+    const url = "https://ipllrj2mq8.execute-api.ap-southeast-1.amazonaws.com/techtrek/login"
+    const xApiKey = "FagLlQytW3aPBTWJXcAxo2QA1QqEtr2u3xnBPLAd"
+
+
+    let config ={
+        headers:{ 'x-api-key': xApiKey }
+    }
+    let bodydata ={
+        body: JSON.stringify({
+        "userName": name,
+        "userPass": password })
+    }
 
     const handleSubmit= async(e)=>{             
         e.preventDefault();
-
-        axios.get('https://jsonplaceholder.typicode.com/users/1')        
+        axios.post(url,bodydata,config)        
         .then((response) => {
             console.log(response);
             if (response.status > 300) {
@@ -48,14 +59,16 @@ const Login = () =>{
                             user: 'in',
                             userData: response.data,
                             user: response.data.username,
-                            id: response.data.id,
-                            lastname:response.data.username,                        
+
+                            custID:'custID',
+                            accountKey:'accountKey',
                             firstname:'John',
                             lastname:'Wayne',
                             NRIC:'S1234567h',
-                            Age:'32',
+                            Age:'0',
                             Number:'12346578',
                             email:'john@gmail.com',
+
                         })
                     );
 

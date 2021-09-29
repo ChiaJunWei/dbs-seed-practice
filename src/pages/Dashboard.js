@@ -14,13 +14,13 @@ import Sidebar from './Sidebar/Sidebar';
 import '../Styles/dashboard.css';
 import Textbox from "./dashboard-components/Textbox";
 
-import LoggedIn from "../Functionals/isLogin"
+import LogInCheck from "../Functionals/LogInCheck"
 
 
 const mdTheme = createTheme();
 
 function DashboardContent() {
-    LoggedIn();
+    LogInCheck();
     
   
   return (

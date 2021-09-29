@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Sidebar from './Sidebar/Sidebar';
 import '../Styles/TranscationTable.css'
 
-
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -11,14 +10,17 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles  } from '@material-ui/core/styles';
-import LoggedIn from "../Functionals/isLogin"
+import LogInCheck from "../Functionals/LogInCheck"
+import GetUserData from "../Functionals/GetUserData"
 
 
 
 function TransactionTable() {
     const [data,setdata] = useState({});
+    var userData=GetUserData();
     
-    LoggedIn();  
+    
+    LogInCheck();  
 
 
      useEffect(()=> {

@@ -17,7 +17,7 @@ const Dashboard = () => {
                 <p style={{color: "#538b01"}}> Welcome back, {(data.user)} </p>
                 <img src='https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500' alt = "dbs-logo"width="200" height="300"></img>
                 <p> ID:{(data.id)} </p>
-                 
+                 <p>iss53</p>
             </div>
         </div>
     )

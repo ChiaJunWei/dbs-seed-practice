@@ -4,8 +4,9 @@ import MuiGrid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import GetUserData from "./GetUserData"
+import Title from './Title';
+import PersonIcon from '@mui/icons-material/Person';
 
 const style = {
     width: '100%',
@@ -27,6 +28,8 @@ export default function VerticalDividerText() {
 
   return (
     <Grid container>
+      <Title>About Me</Title>
+      <PersonIcon/>
       <Grid item xs>
         <List sx={style} component="nav" aria-label="mailbox folders">
         <ListItem button>

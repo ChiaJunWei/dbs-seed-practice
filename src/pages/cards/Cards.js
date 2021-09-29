@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from './CardItem';
 import './Cards.css';
 import dbs1 from '../../assets/accountstatement.jpeg'
-import dbs2 from '../../images/img-dbs2.jpg'
+import dbs2 from '../../assets/images/img-dbs2.jpg'
 
 
 function Cards() {

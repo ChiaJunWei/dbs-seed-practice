@@ -6,13 +6,15 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+
+import Chart from './dashboard-components/Chart';
+import Deposits from './dashboard-components/Deposits';
+import Orders from './dashboard-components/Orders';
 import Sidebar from './Sidebar/Sidebar';
 import '../Styles/dashboard.css';
-import Textbox from "./Textbox";
-import LoggedIn from "./isLogin"
+import Textbox from "./dashboard-components/Textbox";
+
+import LoggedIn from "../Functionals/isLogin"
 
 
 const mdTheme = createTheme();

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Sidebar from './Sidebar/Sidebar';
-import '../Styles/Login.css'
+import '../Styles/TranscationTable.css'
 
 
 import Table from '@mui/material/Table';
@@ -11,7 +11,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles  } from '@material-ui/core/styles';
-import LoggedIn from "./isLogin"
+import LoggedIn from "../Functionals/isLogin"
 
 
 

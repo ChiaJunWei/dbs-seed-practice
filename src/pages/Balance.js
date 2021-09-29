@@ -10,8 +10,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { makeStyles  } from '@material-ui/core/styles';
-import LoggedIn from "./isLogin"
-import GetUserData from "./GetUserData"
+import LoggedIn from "../Functionals/isLogin"
+import GetUserData from "../Functionals/GetUserData"
 
 
 function Balance() {
@@ -75,45 +75,3 @@ function Balance() {
 };
 
 export default Balance;
-
-
-// import React from "react";
-// import {useSelector} from "react-redux"
-// import {selectUser} from '../redux/userSlice'
-// import {selectTempUser} from '../redux/temploginSlice'
-// import LoggedIn from "./isLogin"
-// import GetUserData from "./GetUserData"
-// import '../Styles/Login.css'
-// import Sidebar from './Sidebar/Sidebar';
-
-
-
-
-// function Balance() {
-//     const user = useSelector(selectUser);
-//     const tempuser = useSelector(selectTempUser);  
-//     var data=GetUserData();
-//     LoggedIn();
-
-
-//     return(
-//         <div className='transfer-container'>
-//             <Sidebar/>  
-//         <div className="BalanceTable">
-//             <table style={{border:"1px solid"}}>
-//                 <tr style={{border:"1px solid"}}>
-//                     <th >Full Name</th>
-//                     <th>Balance</th>
-//                 </tr>
-//                 <tr style={{border:"1px solid"}}>
-//                     <td style={{border:"1px solid"}}>{(data.user)}</td>
-//                     <td style={{border:"1px solid"}}> ${(data.id)}</td>
-//                 </tr>
-           
-//         </table>   
-//         </div> 
-//         </div>
-//         );
-// };
-
-// export default Balance;

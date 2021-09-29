@@ -1,0 +1,9 @@
+.table-container {
+    float: left;
+    width: 82%;
+    margin-left: 20px;
+    margin-top: 50px;
+    min-width: 800px;
+    position: relative;
+  }
+  

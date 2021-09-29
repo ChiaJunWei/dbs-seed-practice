@@ -4,7 +4,7 @@ import MuiGrid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import GetUserData from "./GetUserData"
+import GetUserData from "../../Functionals/GetUserData"
 import Title from './Title';
 import PersonIcon from '@mui/icons-material/Person';
 

@@ -1,0 +1,78 @@
+
+
+  .transfer-container {
+    width: 100%;
+    top: 0;
+  }
+
+  .transfer-page-container {
+    float: left;
+    width: 82%;
+    margin-left: 200px;
+    min-width: 800px;
+  }
+
+  .transfer {
+    text-align: center;
+    vertical-align: middle;
+    min-width: 10%;
+    z-index: 1000;
+    position: relative;
+    min-width: 300px;
+  }
+.transfer-box{
+    margin-top: 5%;
+    display: flex;
+    position: relative;
+}
+
+
+.form-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 750px;
+    max-width: 80%;
+    margin-left: 3%;
+    min-width: 750px;
+    min-height: 400px;
+    padding: 30px 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 36px #222;
+    background-color: white;
+    position: absolute;
+  }
+
+  .trans-box {
+    background: white;
+    padding: 10px;
+  }
+
+  .input {
+    width: 20px;
+  }
+
+
+  #transferinput {
+    width: 50%;
+     padding: 12px 20px;
+    margin: auto;
+    /* box-sizing: border-box; */
+  }
+
+  .egiftbutton {
+    float: left;
+  }
+
+
+
+
+  .transferbutton {
+    width: 80%;
+    margin-left: -350px;
+    padding: 3px;
+    box-sizing: border-box;
+    color: white;
+    font-size: x-large;
+    background-color: red;
+  }
+  

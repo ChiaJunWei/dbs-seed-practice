@@ -6,6 +6,10 @@
   position: relative;
   min-width: 300px;
 }
+.input {
+  width: 20px;
+}
+
 
 form {
   text-align: center;
@@ -76,45 +80,4 @@ img.dbslogo {
 .trans-box {
   background: white;
   padding: 10px;
-}
-
-.egiftbutton {
-  float: left;
-}
-
-h2 {
-  font: size 20px;
-}
-
-.transfer-container {
-  width: 100%;
-  top: 0;
-}
-
-.transfer-page-container {
-  float: left;
-  width: 82%;
-  margin-left: 200px;
-  min-width: 800px;
-}
-
-.table-container {
-  float: left;
-  width: 82%;
-  margin-left: 20px;
-  margin-top: 50px;
-  min-width: 800px;
-  position: relative;
-}
-
-.nav {
-  z-index: 9999;
-  background-color: rgb(191, 191, 191);
-}
-
-.BalanceTable {
-  margin: 600px;
-  margin-top: 250px;
-  margin-left: 800px;
-  float: left;
 }

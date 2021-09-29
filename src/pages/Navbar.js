@@ -1,7 +1,7 @@
 import React from "react";
 import { Link} from "react-router-dom";
 import header1 from '../assets/dbslogo.png';
-import '../Styles/Login.css'
+import '../Styles/navbar.css'
 
 import {useSelector} from "react-redux"
 import {selectUser} from '../redux/userSlice'

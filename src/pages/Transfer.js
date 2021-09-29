@@ -1,12 +1,12 @@
 import React, {  useState } from 'react';
 import axios from 'axios';
-import '../Styles/Login.css'
+import '../Styles/transfer.css'
 import Sidebar from './Sidebar/Sidebar';
 import {useSelector} from "react-redux"
 import {selectUser} from '../redux/userSlice'
 import {selectTempUser} from '../redux/temploginSlice'
-import LoggedIn from "./isLogin"
-import GetUserData from "./GetUserData"
+import LoggedIn from "../Functionals/isLogin"
+import GetUserData from "../Functionals/GetUserData"
 
 const Transfer =() => {
     const user = useSelector(selectUser);
@@ -47,9 +47,8 @@ const Transfer =() => {
         <div className='transfer-container'>
             <Sidebar/>
             <div className='transfer-page-container'>
-            <div className="login-container">
-            <div className="login">
-                <div className="box">
+            <div className="transfer">
+                <div className="transfer-box">
                     <div className='form-wrap'>
                         <div className="trans-box"> <h2 className='h2'>Transfer</h2> </div>                       
                         <table style={{border:"1px solid"}} >   
@@ -58,7 +57,7 @@ const Transfer =() => {
                                     <label> Payee Account ID:</label>
                                 </td>
                                 <td>
-                                < input type= "text" placeholder="Account No." value={payeeid} onChange= {(e)=>setPayeeid(e.target.value)}/>
+                                < input id='transferinput' type= "text" placeholder="Account No." value={payeeid} onChange= {(e)=>setPayeeid(e.target.value)}/>
                                 </td>
                                 
                             </tr>
@@ -67,7 +66,7 @@ const Transfer =() => {
                                     <label> Amount:</label>
                                 </td>
                                 <td>
-                                <input type= "text" placeholder="Amount:" value={amount} onChange= {(e)=>setAmount(e.target.value)}/>
+                                <input id='transferinput' type= "text" placeholder="Amount:" value={amount} onChange= {(e)=>setAmount(e.target.value)}/>
                                 </td>
                                 
                             </tr>
@@ -76,7 +75,7 @@ const Transfer =() => {
                                     <label> eGift?</label>
                                 </td>
                                 <td>
-                                <input type= "checkbox" id='egiftbutton' checked={egift} onChange={(e)=>{setEgift(e.target.checked)}}/>
+                                <input id='transferinput' type= "checkbox" id='egiftbutton' checked={egift} onChange={(e)=>{setEgift(e.target.checked)}}/>
                                 </td>
                                 
                             </tr>
@@ -85,7 +84,7 @@ const Transfer =() => {
                                     <label> Message:</label>    
                                 </td>
                                 <td>
-                                <input type= "text" placeholder="Message" value={message} onChange= {(e)=>setMessage(e.target.value)}/>
+                                <input id='transferinput' type= "text" placeholder="Message" value={message} onChange= {(e)=>setMessage(e.target.value)}/>
                                 </td>
                                 
                             </tr>
@@ -105,7 +104,7 @@ const Transfer =() => {
                 </div>
             </div>
             </div>
-            </div>
+
 
         </div>
 

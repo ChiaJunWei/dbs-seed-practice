@@ -49,22 +49,6 @@ function TransactionTable() {
   },[])})
 
 
-
-
-    //  useEffect(()=> {
-    //     fetch('https://jsonplaceholder.typicode.com/users/')
-    //     .then(response => response.json())
-    //     .then(json => setdata(json))
-    // },[])
-    // console.log(data)
-
-
-
-
-
-
-
-
     var mydata = Object.keys(data).map(function(key) {
         return data[key];
      });
